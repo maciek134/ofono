@@ -62,7 +62,7 @@ index 42508382da362bc8d12f0e62f53453fc4f671bee..bad91b88516c5e4205069f3fd4ba51f0
  
 +unit_test_cell_info_SOURCES = unit/test-cell-info.c src/cell-info.c src/log.c
 +unit_test_cell_info_CFLAGS = $(AM_CFLAGS) $(COVERAGE_OPT)
-+unit_test_cell_info_LDADD = @GLIB_LIBS@ -ldl
++unit_test_cell_info_LDADD = $(ell_ldadd) @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_cell_info_OBJECTS)
 +unit_tests += unit/test-cell-info
 +
