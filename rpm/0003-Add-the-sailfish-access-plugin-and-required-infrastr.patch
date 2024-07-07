@@ -85,7 +85,7 @@ index 09c4f3f3850f13e22e3a59f26794a84101de8f9c..0ab5d8e4ed423489e28bab448631b2aa
 +				src/dbus-clients.c gdbus/object.c \
 +				src/dbus.c src/log.c
 +unit_test_dbus_clients_CFLAGS =  @DBUS_GLIB_CFLAGS@ $(COVERAGE_OPT) $(AM_CFLAGS)
-+unit_test_dbus_clients_LDADD = @DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
++unit_test_dbus_clients_LDADD = $(ell_ldadd) @DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_dbus_clients_OBJECTS)
 +unit_tests += unit/test-dbus-clients
 +
@@ -93,7 +93,7 @@ index 09c4f3f3850f13e22e3a59f26794a84101de8f9c..0ab5d8e4ed423489e28bab448631b2aa
 +				src/dbus-queue.c gdbus/object.c \
 +				src/dbus.c src/log.c
 +unit_test_dbus_queue_CFLAGS =  @DBUS_GLIB_CFLAGS@ $(COVERAGE_OPT) $(AM_CFLAGS)
-+unit_test_dbus_queue_LDADD = @DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
++unit_test_dbus_queue_LDADD = $(ell_ldadd) @DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_dbus_queue_OBJECTS)
 +unit_tests += unit/test-dbus-queue
 +
@@ -101,7 +101,7 @@ index 09c4f3f3850f13e22e3a59f26794a84101de8f9c..0ab5d8e4ed423489e28bab448631b2aa
 +unit_test_sailfish_access_SOURCES = unit/test-sailfish_access.c \
 +			plugins/sailfish_access.c src/dbus-access.c src/log.c
 +unit_test_sailfish_access_CFLAGS = $(AM_CFLAGS) $(COVERAGE_OPT)
-+unit_test_sailfish_access_LDADD = @GLIB_LIBS@ -ldl
++unit_test_sailfish_access_LDADD = $(ell_ldadd) @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_sailfish_access_OBJECTS)
 +unit_tests += unit/test-sailfish_access
 +endif
@@ -109,7 +109,7 @@ index 09c4f3f3850f13e22e3a59f26794a84101de8f9c..0ab5d8e4ed423489e28bab448631b2aa
 +unit_test_dbus_access_SOURCES = unit/test-dbus-access.c src/dbus-access.c \
 +			src/log.c
 +unit_test_dbus_access_CFLAGS = $(AM_CFLAGS) $(COVERAGE_OPT)
-+unit_test_dbus_access_LDADD = @GLIB_LIBS@ -ldl
++unit_test_dbus_access_LDADD = $(ell_ldadd) @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_dbus_access_OBJECTS)
 +unit_tests += unit/test-dbus-access
 +
