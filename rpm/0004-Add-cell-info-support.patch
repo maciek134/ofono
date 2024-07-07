@@ -81,7 +81,7 @@ index 42508382da362bc8d12f0e62f53453fc4f671bee..bad91b88516c5e4205069f3fd4ba51f0
 +			src/dbus-clients.c src/dbus.c src/log.c
 +unit_test_cell_info_dbus_CFLAGS = $(AM_CFLAGS) $(COVERAGE_OPT) \
 +			@DBUS_GLIB_CFLAGS@
-+unit_test_cell_info_dbus_LDADD = @$(ell_ldadd) DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
++unit_test_cell_info_dbus_LDADD = $(ell_ldadd) @DBUS_GLIB_LIBS@ @GLIB_LIBS@ -ldl
 +unit_objects += $(unit_test_cell_info_dbus_OBJECTS)
 +unit_tests += unit/test-cell-info-dbus
 +
