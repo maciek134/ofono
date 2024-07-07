@@ -1762,7 +1762,7 @@ index 0000000000000000000000000000000000000000..faac5c0c1e5e94b22c837817630d3fe5
 +	gsize n = gutil_ptrv_length(self->cells);
 +
 +	self->cells = g_renew(struct ofono_cell*, self->cells, n + 2);
-+	self->cells[n++] = g_memdup(c, sizeof(*c));
++	self->cells[n++] = g_memdup2(c, sizeof(*c));
 +	self->cells[n] = NULL;
 +	info->cells = self->cells;
 +}
